@@ -12,7 +12,7 @@ let lightbox = new SimpleLightbox('.gallery a');
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
-  gallery.innerHTML = ''; // Clear previous results
+  gallery.innerHTML = '';
   query = e.target.searchQuery.value.trim();
   page = 1;
   if (query === '') {
@@ -90,7 +90,7 @@ function renderImages(images) {
     })
     .join('');
   gallery.insertAdjacentHTML('beforeend', markup);
-  lightbox.refresh(); // Refresh lightbox with new elements
+  lightbox.refresh();
 
   const { height: cardHeight } = document
     .querySelector('.gallery')
